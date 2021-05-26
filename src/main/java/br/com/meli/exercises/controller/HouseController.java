@@ -13,12 +13,12 @@ public class HouseController {
     @Autowired
     private HouseService houseService;
 
-    @PostMapping("/house/size/")
+    @GetMapping("/house/size/")
     public House getTotalHouseSize(@RequestBody House house) {
         return houseService.getHouseSize(house);
     }
 
-    @PostMapping("/house/value/")
+    @GetMapping("/house/value/")
     public House getHouseAmount(@RequestBody House house) {
         return houseService.getHouseAmount(house);
     }
