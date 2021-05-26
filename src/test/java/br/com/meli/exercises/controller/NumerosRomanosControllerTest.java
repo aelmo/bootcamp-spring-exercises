@@ -12,18 +12,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class CodigoMorseControllerTest {
+public class NumerosRomanosControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    void shouldRespondWithTranslatedMorseCodeAndOkStatus() throws Exception {
-        String morse = "-- . .-. -.-. .- -.. ---   .-.. .. -... .-. .";
+    void shouldReturnCorrectRomanNumeralsAndOkStatus() throws Exception {
+        final int decimal = 19;
 
-        mockMvc.perform(get("/morse")
-                .param("codigoMorse", morse))
+        mockMvc.perform(get("/romano")
+                .param("decimal", String.valueOf(decimal)))
                 .andExpect(status().isOk())
-                .andExpect(content().string("mercado libre"));
+                .andExpect(content().string("XIX"));
     }
 }
