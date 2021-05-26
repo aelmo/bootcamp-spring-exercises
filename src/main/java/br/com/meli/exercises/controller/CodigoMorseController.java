@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CodigoMorseController {
-    private CodigoMorseService codigoMorseService;
+
+    private final CodigoMorseService codigoMorseService;
 
     public CodigoMorseController(CodigoMorseService codigoMorseService) {
         this.codigoMorseService = codigoMorseService;
