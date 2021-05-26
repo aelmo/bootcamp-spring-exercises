@@ -10,7 +10,7 @@ public class CodigoMorseController {
     @Autowired
     private CodigoMorseService codigoMorseService;
 
-    @PostMapping(path = "/morse", consumes = "application/json", produces = "application/json")
+    @GetMapping(path = "/morse", consumes = "application/json", produces = "application/json")
     @ResponseBody
     public String traduzCodigoMorse(@RequestBody String codigoMorse) {
         return this.codigoMorseService.traduzCodigoMorse(codigoMorse);
