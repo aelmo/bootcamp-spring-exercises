@@ -17,8 +17,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class CodigoMorseControllerTest {
-    private CodigoMorseService morseService = new CodigoMorseServiceImpl();
-
     @Autowired
     private MockMvc mockMvc;
 
