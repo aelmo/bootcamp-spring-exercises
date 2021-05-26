@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CodigoMorseController {
-
-    @Autowired
     private CodigoMorseService codigoMorseService;
+
+    public CodigoMorseController(CodigoMorseService codigoMorseService) {
+        this.codigoMorseService = codigoMorseService;
+    }
 
     @GetMapping(path = "/morse", consumes = "application/json", produces = "application/json")
     @ResponseBody
