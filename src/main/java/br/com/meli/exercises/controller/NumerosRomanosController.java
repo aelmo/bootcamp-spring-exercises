@@ -14,6 +14,6 @@ public class NumerosRomanosController {
 
     @GetMapping("/romano/{decimal}")
     public String decimalParaNumeroRomano(@PathVariable int decimal) {
-        return numerosRomanosService.decimalParaNumeroRomano(decimal);
+        return this.numerosRomanosService.decimalParaNumeroRomano(decimal);
     }
 }
