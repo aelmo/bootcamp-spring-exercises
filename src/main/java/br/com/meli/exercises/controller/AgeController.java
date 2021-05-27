@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AgeController {
-    @Autowired
     public AgeServiceImpl ageService = new AgeServiceImpl();
 
     @GetMapping("/{day}/{month}/{year}")
