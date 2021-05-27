@@ -9,8 +9,13 @@ import java.util.List;
 
 @Service
 public interface HouseService {
+
     House getHouseSize(House house);
+
     House getHouseAmount(House house);
+
     Room getBiggestRoom(House house);
+
     HashMap<String, Double> getTotalSizeByRoom(House house);
+
 }

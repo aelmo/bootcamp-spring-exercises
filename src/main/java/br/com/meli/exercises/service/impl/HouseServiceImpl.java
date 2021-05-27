@@ -13,9 +13,9 @@ public class HouseServiceImpl implements HouseService {
 
     @Override
     public House getHouseSize(House house) {
-        Double totalSize = 0.0;
+        double totalSize = 0.0;
 
-        for(Room room: house.getRooms()) {
+        for (Room room: house.getRooms()) {
             totalSize = totalSize + (room.getSize());
         }
 
@@ -36,8 +36,8 @@ public class HouseServiceImpl implements HouseService {
     public HashMap<String, Double> getTotalSizeByRoom(House house) {
         HashMap<String, Double> roomSizesHashMap = new HashMap<>();
 
-        for(Room room: house.getRooms()) {
-            roomSizesHashMap.put(room.getName(),                                                            room.getSize());
+        for (Room room: house.getRooms()) {
+            roomSizesHashMap.put(room.getName(), room.getSize());
         }
 
         return roomSizesHashMap;

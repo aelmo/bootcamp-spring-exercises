@@ -13,17 +13,17 @@ public class HouseController {
     @Autowired
     private HouseService houseService;
 
-    @GetMapping("/house/size/")
+    @GetMapping("/house/size")
     public House getTotalHouseSize(@RequestBody House house) {
         return houseService.getHouseSize(house);
     }
 
-    @GetMapping("/house/value/")
+    @GetMapping("/house/value")
     public House getHouseAmount(@RequestBody House house) {
         return houseService.getHouseAmount(house);
     }
 
-    @GetMapping("/house/biggerRoom/")
+    @GetMapping("/house/biggerRoom")
     public Room getBiggerRoom(@RequestBody House house) {
         return houseService.getBiggestRoom(house);
     }
@@ -32,6 +32,4 @@ public class HouseController {
     public HashMap<String, Double> getTotalSizesByRoom(@RequestBody House house) {
         return houseService.getTotalSizeByRoom(house);
     }
-
-
 }
