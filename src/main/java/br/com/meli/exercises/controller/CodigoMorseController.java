@@ -12,8 +12,8 @@ public class CodigoMorseController {
         this.codigoMorseService = codigoMorseService;
     }
 
-    @GetMapping(path = "/morse")
-    public String traduzCodigoMorse(@RequestParam String codigoMorse) {
+    @PostMapping(path = "/morse", consumes = "application/json", produces = "application/json")
+    public String traduzCodigoMorse(@RequestBody String codigoMorse) {
         return this.codigoMorseService.traduzCodigoMorse(codigoMorse);
     }
 }
