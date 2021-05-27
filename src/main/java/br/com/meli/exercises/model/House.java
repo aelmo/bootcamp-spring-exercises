@@ -55,6 +55,18 @@ public class House {
         this.totalSize = totalSize;
     }
 
+    public Room getBiggestRoom() {
+        Room biggestRoom = this.getRooms().get(0);
+
+        for(Room room:this.getRooms()) {
+            if(room.getSize() >= biggestRoom.getSize()) {
+                biggestRoom = room;
+            }
+        }
+
+        return biggestRoom;
+    }
+
     @Override
     public String toString() {
         return "House{" +
@@ -65,6 +77,4 @@ public class House {
                 ", totalSize=" + totalSize +
                 '}';
     }
-
-
 }

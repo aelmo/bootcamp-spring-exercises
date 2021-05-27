@@ -25,7 +25,7 @@ public class HouseController {
 
     @GetMapping("/house/biggerRoom/")
     public Room getBiggerRoom(@RequestBody House house) {
-        return houseService.getBiggerRoom(house);
+        return houseService.getBiggestRoom(house);
     }
 
     @GetMapping("/house/room/sizes")

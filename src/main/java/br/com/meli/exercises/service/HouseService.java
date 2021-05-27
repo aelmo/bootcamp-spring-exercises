@@ -11,6 +11,6 @@ import java.util.List;
 public interface HouseService {
     House getHouseSize(House house);
     House getHouseAmount(House house);
-    Room getBiggerRoom(House house);
+    Room getBiggestRoom(House house);
     HashMap<String, Double> getTotalSizeByRoom(House house);
 }

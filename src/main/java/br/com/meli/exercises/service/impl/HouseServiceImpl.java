@@ -16,7 +16,7 @@ public class HouseServiceImpl implements HouseService {
         Double totalSize = 0.0;
 
         for(Room room: house.getRooms()) {
-            totalSize = totalSize + (room.getHeight() * room.getWidth());
+            totalSize = totalSize + (room.getSize());
         }
 
         house.setTotalSize(totalSize);
@@ -29,23 +29,15 @@ public class HouseServiceImpl implements HouseService {
         return house;
     }
 
-    public Room getBiggerRoom(House house) {
-        Room biggerRoom = house.getRooms().get(0);
-
-        for(Room room:house.getRooms()) {
-            if((room.getHeight() * room.getWidth()) >= (biggerRoom.getHeight() * biggerRoom.getWidth())) {
-                biggerRoom = room;
-            }
-        }
-
-        return biggerRoom;
+    public Room getBiggestRoom(House house) {
+        return house.getBiggestRoom();
     }
 
     public HashMap<String, Double> getTotalSizeByRoom(House house) {
         HashMap<String, Double> roomSizesHashMap = new HashMap<>();
 
         for(Room room: house.getRooms()) {
-            roomSizesHashMap.put(room.getName(), room.getHeight() * room.getWidth());
+            roomSizesHashMap.put(room.getName(),                                                            room.getSize());
         }
 
         return roomSizesHashMap;

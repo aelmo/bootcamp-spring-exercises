@@ -35,6 +35,10 @@ public class Room {
         this.height = height;
     }
 
+    public Double getSize() {
+        return this.getHeight() * this.getWidth();
+    }
+
     @Override
     public String toString() {
         return "Room{" +
