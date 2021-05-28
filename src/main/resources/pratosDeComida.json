@@ -1,0 +1,13 @@
+[{
+  "nome": "Pizza",
+  "ingredientes":[
+    {
+      "nome": "Tomate",
+      "calorias": 10
+    },
+    {
+      "nome": "Queijo",
+      "calorias": 15
+    }
+  ]
+}]
