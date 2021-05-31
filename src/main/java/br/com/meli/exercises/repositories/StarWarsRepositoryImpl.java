@@ -20,7 +20,7 @@ public class StarWarsRepositoryImpl implements StarWarsRepository{
     }
 
     @Override
-    public List<Character> findCharacteresByName(String nameCharacter) {
+    public List<Character> findCharacteresByNameContaining(String nameCharacter) {
         List<Character> characteres = loadCharacteresDataBase();
         return characteres.stream()
                 .filter(character -> matchWith(nameCharacter, character))
